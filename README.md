@@ -21,7 +21,7 @@ My hypothesis is that Perspective will be more likely to mark the comment with a
 
 ### 3. Set Up Example for the toxic tests.
 
-### I set up some examples for test cases with cap and non-cap sentences.
+I set up some examples for test cases with cap and non-cap sentences.
 
 ### 4. Get toxicity score and determine if toxic based on threshold and get the actual score in a dataframe
 
