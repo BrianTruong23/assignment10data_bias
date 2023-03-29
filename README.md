@@ -1,6 +1,6 @@
 # Assignment10 Data_bias
 
-Steps:
+## Steps:
 
 1. Set Up Toxic Threshold
 2. Set up hypothesis
@@ -9,13 +9,15 @@ Steps:
 5. Evaluate the fairness of the model
 6. Finding and Results
 
-1) Set up Toxic Threshold
+## Detailed Explanation
+
+1. Set up Toxic Threshold
    As the average of toxicity score for non-toxic comments is around 0.11 and the average of toxicity score for toxic comments is around 0.76, I would choose the threshold of toxicity around 0.4.
 
-2) Set up hypothesis
+2. Set up hypothesis
    My hypothesis is that Perspective will be more likely to mark the comment with all-caps words as toxic when compared to non-cap words.
 
-3) Set Up Example for the toxic tests.
+3. Set Up Example for the toxic tests.
 
 I set up some examples for test cases with cap and non-cap sentences.
 
@@ -25,23 +27,7 @@ Then, I combine the data with the comments, toxic, actual toxic, actual cap feat
 
 5. Evaluate the fairness of the model
 
-I evaluate the fairness of the model by using the function to determine how may cases the model got it wrong or right.
-
-def class_wise_acc(y_actual, y_predicted):
-total_p = 0
-total_n = 0
-TP=0
-TN=0
-for i in range(len(y_predicted)):
-if y_actual[i]==1:
-total_p = total_p+1
-if y_actual[i]==y_predicted[i]:
-TP=TP+1
-if y_actual[i]==0:
-total_n=total_n+1
-if y_actual[i]==y_predicted[i]:
-TN=TN+1
-return(TP/total_p, TN/total_n)
+I evaluate the fairness of the model by using a function taught in class to determine how may cases the model got it wrong or right for both cases of all-cap or non-cap.
 
 6. Finding and Results
 
